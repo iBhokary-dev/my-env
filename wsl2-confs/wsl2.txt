@@ -1,0 +1,14 @@
+# .wslconfig
+
+[wsl2]
+
+memory=32GB
+processors=6
+
+# wsl.conf
+
+[interop]
+appendWindowsPath = false
+
+[boot]
+systemd=true
