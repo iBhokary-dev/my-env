@@ -3,13 +3,14 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [],
     "alwaysShowNotificationIcon": true,
+    "centerOnLaunch": true,
     "copyOnSelect": true,
     "defaultProfile": "{0e274107-e4a6-4614-bc86-39bac34d0668}",
     "disableAnimations": false,
     "experimental.rendering.software": false,
     "firstWindowPreference": "defaultProfile",
-    "initialCols": 109,
-    "initialRows": 29,
+    "initialCols": 105,
+    "initialRows": 25,
     "language": "en-US",
     "launchMode": "default",
     "newTabMenu": 
@@ -70,34 +71,25 @@
                 "cursorShape": "underscore",
                 "font": 
                 {
-                    "size": 18.0
+                    "face": "CaskaydiaCove Nerd Font",
+                    "size": 20.0
                 },
                 "guid": "{0e274107-e4a6-4614-bc86-39bac34d0668}",
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell 7",
-                "padding": "0",
+                "padding": "7",
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "font": 
-                {
-                    "size": 19.0
-                },
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": true,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
                 "antialiasingMode": "grayscale",
-                "colorScheme": "xcad",
+                "colorScheme": "Dracula PRO",
                 "cursorShape": "underscore",
                 "experimental.retroTerminalEffect": false,
                 "font": 
                 {
-                    "face": "FiraCode Nerd Font Retina",
-                    "size": 18.0,
+                    "face": "CaskaydiaCove Nerd Font",
+                    "size": 19.0,
                     "weight": "medium"
                 },
                 "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
@@ -414,50 +406,6 @@
     "showTabsInTitlebar": true,
     "tabSwitcherMode": "inOrder",
     "theme": "dark",
-    "themes": 
-    [
-        {
-            "name": "legacyDark",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "dark",
-                "useMica": false
-            }
-        },
-        {
-            "name": "legacyLight",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "light",
-                "useMica": false
-            }
-        },
-        {
-            "name": "legacySystem",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "system",
-                "useMica": false
-            }
-        }
-    ],
+    "themes": [],
     "useAcrylicInTabRow": true
 }
