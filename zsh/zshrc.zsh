@@ -7,8 +7,8 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="$PATH:/mnt/c/Users/yourUser/AppData/Local/Microsoft/WindowsApps"
-export PATH="$PATH:/mnt/c/Users/yourUser/AppData/Local/Programs/Microsoft VS Code/bin"
+export PATH="$PATH:/mnt/c/Users/lucas/AppData/Local/Microsoft/WindowsApps"
+export PATH="$PATH:/mnt/c/Users/lucas/AppData/Local/Programs/Microsoft VS Code/bin"
 export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin"
 export PATH="$PATH:/mnt/c/ProgramData/DockerDesktop/version-bin"
 export PATH="$PATH:/mnt/c/WINDOWS"
@@ -29,15 +29,26 @@ source $ZSH/oh-my-zsh.sh
 # Rust zsh-alternativs install with yay
 # yay -S exa fd procs sd dust ripgrep tokei hyperfine bottom tealdeer bandwhich grex
 
-# Aliases
+# Custom Aliases
 alias zshrc="code .zshrc"
 alias p10kz="code .p10k.zsh"
+# Improved ls command with icons using 'exa'
 alias ls="exa --icons"
+# Clear screen command
 alias cls="clear"
+# Improved 'find' command using 'fd'
 alias find="fd"
+# Display running processes with 'procs'
 alias pd="procs"
+# Improved 'sed' command using 'sd'
 alias sed="sd"
+# Improved 'du' command using 'dust'
 alias du="dust"
+# Add SSH key to agent
+alias ssha="ssh-add ~/.ssh/id_ed25519"
+# Shortcut for GitHub Copilot command
+alias ghc="gh copilot"
+
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -66,6 +77,9 @@ zinit light zsh-users/zsh-autosuggestions
  
 # starship
 #eval "$(starship init zsh)"
+
+# ssh agent
+eval "$(ssh-agent -s)"
 
 . /opt/asdf-vm/asdf.sh
 
