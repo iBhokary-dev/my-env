@@ -13,7 +13,7 @@ export PATH="$PATH:/mnt/c/WINDOWS"
 
 # Theme and Plugins
 ZSH_THEME="robbyrussell"
-plugins=(aliases colored-man-pages fast-syntax-highlighting git docker golang archlinux)
+plugins=(aliases colored-man-pages gh vscode web-search fast-syntax-highlighting git docker golang archlinux)
 
 # auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
