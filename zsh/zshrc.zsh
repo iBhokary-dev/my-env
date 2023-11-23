@@ -1,28 +1,24 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+# Powerlevel10k Instant Prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Environment Variables
 export ZSH="$HOME/.oh-my-zsh"
-
 export PATH="$PATH:/mnt/c/Users/lucas/AppData/Local/Microsoft/WindowsApps"
 export PATH="$PATH:/mnt/c/Users/lucas/AppData/Local/Programs/Microsoft VS Code/bin"
 export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin"
 export PATH="$PATH:/mnt/c/ProgramData/DockerDesktop/version-bin"
 export PATH="$PATH:/mnt/c/WINDOWS"
 
-# Theme
+# Theme and Plugins
 ZSH_THEME="robbyrussell"
+plugins=(fast-syntax-highlighting git docker golang archlinux)
 
 # auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Plugins
-plugins=(fast-syntax-highlighting git docker golang archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,25 +28,16 @@ source $ZSH/oh-my-zsh.sh
 # Custom Aliases
 alias zshrc="code .zshrc"
 alias p10kz="code .p10k.zsh"
-# Improved ls command with icons using 'exa'
-alias ls="exa --icons"
-# Clear screen command
-alias cls="clear"
-# Improved 'find' command using 'fd'
-alias find="fd"
-# Display running processes with 'procs'
-alias pd="procs"
-# Improved 'sed' command using 'sd'
-alias sed="sd"
-# Improved 'du' command using 'dust'
-alias du="dust"
-# Add SSH key to agent
-alias ssha="ssh-add ~/.ssh/id_ed25519"
-# Shortcut for GitHub Copilot command
-alias ghc="gh copilot"
+alias ls="exa --icons"  # Improved ls command with icons using 'exa'
+alias cls="clear"       # Clear screen command
+alias find="fd"         # Improved 'find' command using 'fd'
+alias pd="procs"        # Display running processes with 'procs'
+alias sed="sd"          # Improved 'sed' command using 'sd'
+alias du="dust"         # Improved 'du' command using 'dust'
+alias ssha="ssh-add ~/.ssh/id_ed25519"  # Add SSH key to agent
+alias ghc="gh copilot"  # Shortcut for GitHub Copilot command
 
-
-### Added by Zinit's installer
+# Zinit Installation Check
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
     command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
@@ -59,6 +46,7 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
         print -P "%F{160} The clone has failed.%f%b"
 fi
 
+# Zinit Initialization
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
@@ -76,7 +64,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
  
 # starship
-#eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # ssh agent
 eval "$(ssh-agent -s)"
