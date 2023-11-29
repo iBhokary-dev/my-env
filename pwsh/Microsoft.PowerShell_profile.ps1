@@ -1,5 +1,5 @@
 $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
-
+$ENV:STARSHIP_DISTRO = "󰍲"
 # Load the Terminal icons module.
 Import-Module -Name Terminal-Icons
 
