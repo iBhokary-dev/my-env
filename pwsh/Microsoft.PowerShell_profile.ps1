@@ -1,13 +1,13 @@
-function Show-TerminalIcons {
-    Import-Module Terminal-Icons
-    Show-TerminalIcons @args
-}
+$ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
 
-function Initialize-Profile {
-    $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
-    Invoke-Expression (&starship init powershell)
-}
+# Load the Terminal icons module.
+Import-Module -Name Terminal-Icons
 
-if ($host.Name -eq "ConsoleHost") {
-    Initialize-Profile
-}
+# Load and configure the PowerShell history.
+Import-Module -Name PSReadLine
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows 
+
+# Load the Starship prompt.
+Invoke-Expression (&starship init powershell)
