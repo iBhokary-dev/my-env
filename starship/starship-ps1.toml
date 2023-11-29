@@ -1,3 +1,28 @@
+# ~/.config/starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change command timeout from 500 to 1000 ms
+command_timeout = 1000
+
+# Change the default prompt format
+format = """\
+[╭╴](238)$env_var \
+$all[╰─](238)$character"""
+
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value](white)'
+variable = "STARSHIP_DISTRO"
+disabled = false
+
+[username]
+style_user = "white"
+style_root = "white"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
 [aws]
 symbol = "  "
 
