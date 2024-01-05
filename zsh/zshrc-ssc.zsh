@@ -35,6 +35,10 @@ alias du="dust"         # Improved 'du' command using 'dust'
 alias ssha="ssh-add ~/.ssh/id_ed25519"  # Add SSH key to agent
 alias ghc="gh copilot"  # Shortcut for GitHub Copilot command
 
+# Fuzzy Finder Aliases
+alias fzf="fzf --height 40%" # Fuzzy finder with 40% height
+alias fzfm="fzf --height 40% --multi" # Fuzzy finder with 40% height and multi select
+
 # Zinit Installation Check
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
