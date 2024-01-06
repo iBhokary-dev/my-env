@@ -2,6 +2,7 @@
 
 # Environment Variables
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/mnt/c/Users/lucas/AppData/Local/Microsoft/WindowsApps"
 export PATH="$PATH:/mnt/c/Users/lucas/AppData/Local/Programs/Microsoft VS Code/bin"
 export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin"
