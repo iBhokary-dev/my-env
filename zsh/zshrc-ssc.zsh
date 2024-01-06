@@ -7,11 +7,11 @@ export PATH="$PATH:/mnt/c/Users/lucas/AppData/Local/Programs/Microsoft VS Code/b
 export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin"
 export PATH="$PATH:/mnt/c/ProgramData/DockerDesktop/version-bin"
 export PATH="$PATH:/mnt/c/WINDOWS"
-export PATH="$PATH:/mnt/c/Program Files (x86)/Microsoft/Edge/Application/119.0.2151.72"
+export PATH="$PATH:/mnt/c/Program Files (x86)/Microsoft/Edge/Application/119.0.2151.72" 
 
 # Theme and Plugins
 ZSH_THEME="robbyrussell"
-plugins=(aliases colored-man-pages gh vscode fast-syntax-highlighting git docker golang archlinux)
+plugins=(aliases tmux colored-man-pages gh vscode fast-syntax-highlighting git docker golang archlinux)
 
 # auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -65,10 +65,14 @@ zinit light-mode for \
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
  
+# asdf
+. /opt/asdf-vm/asdf.sh
+
 # starship
 eval "$(starship init zsh)"
 
 # ssh agent
 eval "$(ssh-agent -s)"
 
-. /opt/asdf-vm/asdf.sh
+# zoxide
+eval "$(zoxide init zsh)"
