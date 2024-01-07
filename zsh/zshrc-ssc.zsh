@@ -9,6 +9,7 @@ export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin"
 export PATH="$PATH:/mnt/c/ProgramData/DockerDesktop/version-bin"
 export PATH="$PATH:/mnt/c/WINDOWS"
 export PATH="$PATH:/mnt/c/Program Files (x86)/Microsoft/Edge/Application/119.0.2151.72" 
+export EDITOR=nvim
 
 # Theme and Plugins
 ZSH_THEME="robbyrussell"
